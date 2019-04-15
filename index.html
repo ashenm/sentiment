@@ -29,10 +29,14 @@
   <script type="text/javascript" src="configuration.js"></script>
   <script type="text/javascript" src="sentiment.js"></script>
 
+  <script type="text/javascript">
+    (function () { document.addEventListener('DOMContentLoaded', function () { window.onresize = function () { document.querySelector('figure').style.height = window.innerHeight + 'px'; }; window.onresize(); }); })();
+  </script>
+
 </head>
 <body>
   <main>
-    <figure class="d-flex align-items-center flex-column flex-sm-row justify-content-center m-0 p-3 px-xl-5 mx-xl-5 vh-100">
+    <figure class="d-flex align-items-center flex-column flex-sm-row justify-content-center m-0 p-3 px-xl-5 mx-xl-5">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="negative" class="sentiment flex-grow-1">
         <circle cx="50" cy="50" r="48" fill="#EA4335" />
         <circle cx="30" cy="35" r="7.5" fill="#1B1B1B" />
