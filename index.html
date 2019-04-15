@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+
+  Sentiment
+  A tool to collect qualitative feedback
+  https://github.com/ashenm/sentiment
+
+  Ashen Gunaratne
+  mail@ashenm.ml
+
+-->
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="description" content="A tool to collect qualitative feedback" />
+  <meta name="keywords" content="ashen, gunaratne, ashen gunaratne, lecture, feedback, sentiment" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Ashen Gunaratne" />
+
+  <title>Sentiment</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <style type="text/css">
+    body { background-color: #1b1b1b; } @keyframes progress { 25% { fill: #555; } 50% { fill: #888; } 100% { fill: #BBB; } }
+  </style>
+
+  <script type="text/javascript" src="configuration.js"></script>
+  <script type="text/javascript" src="sentiment.js"></script>
+
+  <script type="text/javascript">
+    (function () { document.addEventListener('DOMContentLoaded', function () { window.onresize = function () { document.querySelector('figure').style.height = window.innerHeight + 'px'; }; window.onresize(); }); })();
+  </script>
+
+</head>
+<body>
+  <main>
+    <figure class="d-flex align-items-center flex-column flex-sm-row justify-content-center m-0 p-3 px-xl-5 mx-xl-5">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="negative" class="sentiment flex-grow-1">
+        <circle cx="50" cy="50" r="48" fill="#EA4335" />
+        <circle cx="30" cy="35" r="7.5" fill="#1B1B1B" />
+        <circle cx="70" cy="35" r="7.5" fill="#1B1B1B" />
+        <path d="M 25.5 72 Q 50 59 74.5 72" style="fill: none; stroke: #1B1B1B; stroke-width: 5;" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="neutral" class="sentiment flex-grow-1 my-2 mx-sm-2 mx-xl-4">
+        <circle cx="50" cy="50" r="48" fill="#FBBC05" />
+        <circle cx="30" cy="35" r="7.5" fill="#1B1B1B" />
+        <circle cx="70" cy="35" r="7.5" fill="#1B1B1B" />
+        <path d="M 25.5 72 Q 50 72 74.5 72" style="fill: none; stroke: #1B1B1B; stroke-width: 5;" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="positive" class="sentiment flex-grow-1">
+        <circle cx="50" cy="50" r="48" fill="#34A853" />
+        <circle cx="30" cy="35" r="7.5" fill="#1B1B1B" />
+        <circle cx="70" cy="35" r="7.5" fill="#1B1B1B" />
+        <path d="M 25.5 72 Q 50 86 74.5 72" style="fill: none; stroke: #1B1B1B; stroke-width: 5;" />
+      </svg>
+    </figure>
+  </main>
+</body>
+</html>
