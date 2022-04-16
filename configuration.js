@@ -22,7 +22,7 @@
      * @const
      * @type {String}
      */
-    ENDPOINT: 'https://script.google.com/macros/s/AKfycbz7WW2UtgNjTQbrolUu5VxB7uCu1KIzoAratpt1N1YJyfD8Esy0PqV01hOGkVXmkvSf/exec'
+    ENDPOINT: 'https://script.google.com/macros/s/AKfycbxWKerCByIHUHHgHPd_179REoyuXp_eTNWxALypo5PDbrC81__A5toHrNxUA4uTHP4d/exec'
 
   };
 
