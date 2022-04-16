@@ -27,6 +27,10 @@
       course: window.sentiment.COURSE
     };
 
+    if (window.crypto && window.crypto.randomUUID) {
+      data.user = crypto.randomUUID();
+    }
+
     xhr.responseType = 'json';
     xhr.onreadystatechange = function xhrresponsehandler () {
 
@@ -40,6 +44,11 @@
       }
 
       document.cookie = 'sentiment=' + data.sentiment + ';max-age=31536000';
+
+      if (data.user) {
+        document.cookie = 'user=' + data.user + ';max-age=31536000';
+      }
+
       success(root, 'Thank You!<br />Your feedback has been submitted!');
 
     };
