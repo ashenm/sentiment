@@ -20,15 +20,48 @@
 
   <title>Sentiment</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-
   <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: #1b1b1b;
+      font-family: BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     circle.face {
       cursor: pointer;
+    }
+
+    main {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    figure {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      margin: 0;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .text-center {
+      text-align: center!important;
+    }
+
+    .text-white {
+      color: #fff!important;
+    }
+
+    .font-weight-bold {
+      font-weight: 700!important;
     }
 
     @keyframes progress {
@@ -42,32 +75,31 @@
         fill: #BBB;
       }
     }
+
+    @media (min-width: 576px) {
+      figure { flex-direction: row!important; }
+    }
   </style>
 
   <script type="text/javascript" src="configuration.js"></script>
   <script type="text/javascript" src="sentiment.js"></script>
-
-  <script type="text/javascript">
-    (function () { document.addEventListener('DOMContentLoaded', function () { window.onresize = function () { document.querySelector('figure').style.height = window.innerHeight + 'px'; }; window.onresize(); }); })();
-  </script>
-
 </head>
 <body>
   <main>
-    <figure class="d-flex align-items-center flex-column flex-sm-row justify-content-center m-0 p-3 px-xl-5 mx-xl-5">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="negative" class="sentiment flex-grow-1">
+    <figure>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="negative" class="sentiment">
         <circle class="face" cx="50" cy="50" r="48" fill="#EA4335" />
         <circle class="eye" cx="30" cy="35" r="7.5" fill="#1B1B1B" />
         <circle class="eye" cx="70" cy="35" r="7.5" fill="#1B1B1B" />
         <path class="mouth" d="M 25.5 72 Q 50 59 74.5 72" style="fill: none; stroke: #1B1B1B; stroke-width: 5;" />
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="neutral" class="sentiment flex-grow-1 my-2 mx-sm-2 mx-xl-4">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="neutral" class="sentiment">
         <circle class="face" cx="50" cy="50" r="48" fill="#FBBC05" />
         <circle class="eye" cx="30" cy="35" r="7.5" fill="#1B1B1B" />
         <circle class="eye" cx="70" cy="35" r="7.5" fill="#1B1B1B" />
         <path class="mouth" d="M 25.5 72 Q 50 72 74.5 72" style="fill: none; stroke: #1B1B1B; stroke-width: 5;" />
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="positive" class="sentiment flex-grow-1">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-sentiment="positive" class="sentiment">
         <circle class="face" cx="50" cy="50" r="48" fill="#34A853" />
         <circle class="eye" cx="30" cy="35" r="7.5" fill="#1B1B1B" />
         <circle class="eye" cx="70" cy="35" r="7.5" fill="#1B1B1B" />
